@@ -1,0 +1,36 @@
+<div>
+	<h1>
+  {{ 'LOVE_TECH' | translate }}
+</h1>
+<p>
+  {{'ABOUT_REWARD' | translate}}
+</p>
+<p>
+  {{'ABOUT_ADD' | translate}}
+</p>
+<form (submit)="addName()">
+  <input [(ngModel)]="newName" [placeholder]="'INPUT_HINT' | translate">
+  <button type="submit">{{'ADD_BTN_TEXT' | translate}}</button>
+</form>
+
+<ul>
+  <li *ngFor="let name of nameListService.names | async">{{name}}</li>
+</ul>
+
+ <h1>WebPack Angular 2 App with {{name}}</h1>
+         <br/>
+         WjInputNumber: <wj-input-number [(value)]="theNumber" [step]="1"></wj-input-number>
+         {{theNumber}}
+	</div> 
+<div>
+ <label>Bound InputDate with min, max, & format</label>
+ <wj-input-date [(value)]="today" [min]="minDate" [max]="maxDate" [format]="'MMM dd, yyyy'"></wj-input-date>
+</div>
+<div>
+ <label>Bound InputTime with min, max, & step</label>
+ <wj-input-time [(value)]="today" [step]="15" [min]="'09:00' | toDate" [max]="'17:00' | toDate"> </wj-input-time>
+</div>
+<div>
+ <label>Bound InputDateTime with min, max, format, and step</label>
+ <wj-input-date-time [(value)]="today" [format]="'MMM dd, yyyy hh:mm tt'" [min]="minDate" [max]="maxDate" [timeStep]="15" [timeMin]="'09:00' | toDate" [timeMax]="'17:00' | toDate"> </wj-input-date-time>
+</div>-->

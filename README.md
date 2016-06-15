@@ -1,2 +1,2 @@
-# angular2_seed_advanced_wijmo_ng2-admin_bootstrap
-Implementation of bootstrap, wijmo, jquery, part of ng2-admin template into angular2 seed advanced
+# angular-seed-advanced_wijmo
+Integrate Wijmo into the angular-seed-advanced boilerplate.
