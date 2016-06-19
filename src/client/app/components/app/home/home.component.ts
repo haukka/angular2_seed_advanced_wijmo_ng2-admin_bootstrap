@@ -5,7 +5,7 @@ import {Store} from '@ngrx/store';
 import {FormComponent} from '../../../frameworks/core.framework/index';
 import {NameListService} from '../../../frameworks/app.framework/index';
 import { FORM_DIRECTIVES } from '@angular/common';
-import { Component, Inject } from '@angular/core';
+import { Inject } from '@angular/core';
 
 import * as wjInput from 'wijmo/wijmo.angular2.input';
 import { ToDatePipe } from './pipes/appPipes';
@@ -20,7 +20,7 @@ import {NameService} from './services/name-service';
   providers: [NameService]
 })
 
-export class HomeComponent{
+export class HomeComponent {
   public newName: string = '';
   public theNumber: Number = 0;
   today: Date;

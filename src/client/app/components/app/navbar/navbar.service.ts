@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {MenuItems} from './app.menu';
 
 @Injectable()
-export class navbarService {
+export class NavbarService {
 
   private _router:any;
 
@@ -10,7 +10,7 @@ export class navbarService {
     return MenuItems;
   }
 
-  public setRouter(router:any): navbarService {
+  public setRouter(router:any): NavbarService {
     this._router = router;
     return this;
   }
@@ -37,7 +37,7 @@ export class navbarService {
 
   private _selectItem(currentPath:any, instructions:any, item:any, parentMenu:any = null) {
     let route = this._generateRoute(instructions);
-    item.selected = !item.disabled && this._isCurrent(route) && this._resolvePath(route, '') == currentPath;
+    item.selected = !item.disabled && this._isCurrent(route) && this._resolvePath(route, '') === currentPath;
     if (parentMenu) {
       parentMenu.expanded = parentMenu.expanded || item.selected;
     }
@@ -54,7 +54,7 @@ export class navbarService {
   private _resolvePath(instruction:any, collected:any):any {
     if (instruction !== null) {
       collected += instruction.urlPath + '/';
-      return this._resolvePath(instruction.child, collected)
+      return this._resolvePath(instruction.child, collected);
     } else {
       return collected.slice(0, -1);
     }

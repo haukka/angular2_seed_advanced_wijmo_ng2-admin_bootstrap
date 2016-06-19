@@ -1,9 +1,10 @@
-import {Directive, Input, Output, EventEmitter, HostListener} from '@angular/core';
+import {Directive, Input, Output, EventEmitter, HostListener, OnInit} from '@angular/core';
 
 @Directive({
   selector: '[baScrollPosition]'
 })
-export class BaScrollPosition {
+
+export class BaScrollPositionDirective implements OnInit {
 
   @Input() public maxHeight:number;
   @Output() public scrollChange:EventEmitter<boolean> = new EventEmitter<boolean>();

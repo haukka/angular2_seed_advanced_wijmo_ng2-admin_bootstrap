@@ -1,5 +1,5 @@
 // angular
-import {ChangeDetectionStrategy, ViewEncapsulation} from '@angular/core';
+import {ChangeDetectionStrategy, ViewEncapsulation, AfterViewInit} from '@angular/core';
 import {RouteConfig} from '@angular/router-deprecated';
 
 // app
@@ -46,7 +46,7 @@ import {Spinner} from './Spinner.service';
   }
 ])
 
-export class AppComponent {
+export class AppComponent implements AfterViewInit {
   isMenuCollapsed:boolean = false;
   
   constructor(private _state:AppState, public analytics: AnalyticsService, private _spinner:Spinner) {

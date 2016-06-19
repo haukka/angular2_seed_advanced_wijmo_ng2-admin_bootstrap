@@ -1,4 +1,4 @@
-import {Injectable} from '@angular/core'
+import {Injectable} from '@angular/core';
 import {Subject}    from 'rxjs/Subject';
 
 @Injectable()
@@ -16,7 +16,7 @@ export class AppState {
   notifyDataChanged(event:any, value:any) {
 
     let current:any = this._data[event];
-    if (current != value) {
+    if (current !== value) {
       this._data[event] = value;
 
       this._data.next({

@@ -1,11 +1,11 @@
-import {Directive, Input, Output, ElementRef, EventEmitter} from '@angular/core';
+import {Directive, Input, ElementRef, OnChanges} from '@angular/core';
 
 import './baSlimScroll.loader.ts';
 
 @Directive({
   selector: '[baSlimScroll]'
 })
-export class BaSlimScroll {
+export class BaSlimScrollDirective implements OnChanges {
 
   @Input() public baSlimScrollOptions:Object;
 

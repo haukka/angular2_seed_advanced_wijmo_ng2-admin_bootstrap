@@ -1,10 +1,10 @@
-﻿import {Pipe} from '@angular/core';
+﻿import {Pipe, PipeTransform} from '@angular/core';
 
 // ToDate pipe - converts date/time string to a Date object
 @Pipe({
     name: 'toDate'
 })
-export class ToDatePipe {
+export class ToDatePipe implements PipeTransform {
     transform(value: any, args: string[]): any {
         if (value && wijmo.isString(value)) {
             // parse date/time using RFC 3339 pattern

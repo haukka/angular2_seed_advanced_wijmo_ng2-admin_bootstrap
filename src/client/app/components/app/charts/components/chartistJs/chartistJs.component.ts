@@ -1,4 +1,4 @@
-import {ViewEncapsulation} from '@angular/core';
+import {ViewEncapsulation, OnInit} from '@angular/core';
 import {BaseComponent} from '../../../../../frameworks/core.framework/index';
 
 @BaseComponent({
@@ -7,14 +7,16 @@ import {BaseComponent} from '../../../../../frameworks/core.framework/index';
   templateUrl: './app/components/app/charts/components/chartistJs/chartistJs.html'
 })
 
-export class ChartistJsComponent {
+export class ChartistJsComponent implements OnInit {
 
   data:any;
 
   constructor() {
+	  this.data = 'test';
   }
 
   ngOnInit() {
+	  this.data = 'test';
   }
 
 }

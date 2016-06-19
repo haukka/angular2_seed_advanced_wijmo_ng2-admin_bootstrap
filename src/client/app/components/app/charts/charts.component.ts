@@ -1,7 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {RouteConfig} from '@angular/router-deprecated';
 
-import {ChartistJsComponent} from "./components/chartistJs/chartistJs.component";
+import {ChartistJsComponent} from './components/chartistJs/chartistJs.component';
 
 @Component({
   selector: 'maps',
@@ -16,12 +16,16 @@ import {ChartistJsComponent} from "./components/chartistJs/chartistJs.component"
     useAsDefault: true,
   }
 ])
-export class ChartsComponent {
+export class ChartsComponent implements OnInit {
+
+  data:any;
 
   constructor() {
+	   this.data = 'test';
   }
 
   ngOnInit() {
+	   this.data = 'test';
   }
 
 }

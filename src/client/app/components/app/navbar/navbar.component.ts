@@ -1,10 +1,9 @@
-import {Component, ElementRef, HostListener, ViewEncapsulation} from '@angular/core';
+import {ElementRef, HostListener, ViewEncapsulation, AfterViewInit, OnInit} from '@angular/core';
 import {Router} from '@angular/router-deprecated';
 import {RouteComponent} from '../../../frameworks/core.framework/index';
 
 import {AppState} from '../app.state';
-import {BaSlimScroll} from './directives';
-import {navbarService} from './navbar.service';
+import {NavbarService} from './navbar.service';
 import * as $ from 'jquery';
 
 const layoutSizes = {
@@ -16,11 +15,11 @@ const layoutSizes = {
   selector: 'sd-navbar',
   templateUrl: './app/components/app/navbar/navbar.component.html',
   styleUrls: ['./app/components/app/navbar/navbar.component.css'],
-  providers: [navbarService],
+  providers: [NavbarService],
   encapsulation: ViewEncapsulation.None
 })
 
-export class NavbarComponent {
+export class NavbarComponent implements AfterViewInit, OnInit {
 
   public menuItems:Array<any>;
   public menuHeight:number;
@@ -36,7 +35,7 @@ export class NavbarComponent {
 
   constructor(private _elementRef:ElementRef,
               private _router:Router,
-              private _sidebarService:navbarService,
+              private _sidebarService:NavbarService,
               private _state:AppState) {
 
     this.menuItems = this._sidebarService.getMenuItems();

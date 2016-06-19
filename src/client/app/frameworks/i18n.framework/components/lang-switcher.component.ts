@@ -43,7 +43,7 @@ export class LangSwitcherComponent {
     } else if (e && e.target) {
       lang = e.target.value;
     }
-	if (document.getElementById('wijmo_lg') != null)
+	if (document.getElementById('wijmo_lg') !== null)
 		document.getElementById('wijmo_lg').remove();
 	let head = document.getElementsByTagName('head').item(0);
 	let script = document.createElement('script');
